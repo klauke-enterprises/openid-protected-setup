@@ -1,0 +1,14 @@
+spring:
+  http:
+    converters:
+      preferred-json-mapper: gson
+  gson:
+    pretty-printing: true
+    enable-complex-map-key-serialization: true
+    lenient: true
+    field-naming-policy: lower_case_with_underscores
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://auth.klauke-enterprises.de/auth/realms/klauke-enterprises/protocol/openid-connect/certs
